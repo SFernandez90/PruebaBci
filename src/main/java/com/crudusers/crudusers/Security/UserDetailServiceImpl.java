@@ -13,8 +13,8 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User userAdmin =  new User();
-        userAdmin.setName("test");
-        userAdmin.setEmail("test@email.com");
+        userAdmin.setName("admin");
+        userAdmin.setEmail("admin@email.com");
         userAdmin.setPassword("$2a$10$6Lq93oX0p0jFS/eXlKU4iOaw7EjlvANfi.zDnejJ9geTk4mxKd9mO");
         return  new UserDetailsImpl(userAdmin);
     }

@@ -72,15 +72,16 @@ public class UserController {
 
     @GetMapping(value = "/findById/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Optional<User> findById(@PathVariable(name = "id") Long id) {
-        System.out.println("ID " + id);
         return userService.findById(id);
     }
 
 
     @DeleteMapping(value = "/delete/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> deleteById(@PathVariable(name = "id") Long id) {
-        userService.deleteById(id);
-        return ResponseEntity.ok("usuario eliminado");
+        if(userService.deleteById(id)){
+            return ResponseEntity.ok("usuario eliminado");
+        }
+        return new ResponseEntity<>("Usuario no encontrado", HttpStatus.NOT_FOUND);
     }
 
     @PatchMapping(value = "/update/{id}", produces = MediaType.APPLICATION_JSON_VALUE)

@@ -7,6 +7,13 @@
 * Swagger.
 * JWT.
 
+## Swagger
+* http://localhost:8080/swagger-ui/index.html
+
+## database h2
+* user: admin
+* pasword:admin
+
 ## Postman
 
 ### Token
@@ -17,10 +24,11 @@
 
 
     {
-        "email": "test@email.com",
-        "password": "test"
+        "email": "admin@email.com",
+        "password": "admin"
     }
 
+* el token se encontrara en el header de la respuesta
 ### Endpoints
 
 #### SAVE
@@ -80,5 +88,4 @@
 * Utilizar Bearer Token obtenido de TOKEN.
 
 
-## Swagger
-* http://localhost:8080/swagger-ui/index.html
+

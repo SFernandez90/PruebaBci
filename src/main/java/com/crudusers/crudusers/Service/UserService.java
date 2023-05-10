@@ -14,7 +14,7 @@ public interface UserService {
 
     public Optional<User> findById(Long id);
 
-    public void deleteById(Long id);
+    public boolean deleteById(Long id);
 
     public ResponseDTO upDate(UserDTO user, Long id, Optional<User> exist);
 
