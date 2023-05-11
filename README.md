@@ -28,7 +28,8 @@
         "password": "admin"
     }
 
-* el token se encontrara en el header de la respuesta
+* el token se encontrara en el header -> authorization de la respuesta
+
 ### Endpoints
 
 #### SAVE
